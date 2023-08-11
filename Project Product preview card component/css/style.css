@@ -1,0 +1,196 @@
+/* Colores */
+:root {
+    /* Primarios */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Hover-cyan: hsl(157, 35%, 19%);
+
+    /* Neutrales */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* Fuentes */
+/* Montserrat - Weights: 500, 700 */
+@font-face {
+    font-family: 'Montserrat';
+    src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_cJD3gnD-w.ttf) format('truetype'),
+        url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE3gnD-w.ttf) format('truetype');
+    font-weight: 500 700;
+    font-style: normal;
+}
+
+/* Fraunces - Weight: 700 */
+@font-face {
+    font-family: 'Fraunces';
+    src: url(https://fonts.gstatic.com/s/fraunces/v8/va9B4kDNxMZdWfMOD5VnMN_A.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+body {
+    font-size: 16px;/* 1rem = 10px */
+    background-color: var(--Cream);
+}
+
+/* Diseño para moviles */
+/* Contenedor */
+.contenedor {
+    background-color: var(--White);
+    width: 37.5rem;
+    height: 68rem;
+    margin: 4rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+.contenedor__imagen{
+    width: 37.5rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+/* Titulos */
+.contenedor__titulo-h3 {
+    font-family: Montserrat, cursive;
+    margin-left: 2rem;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: var(--Dark-grayish-blue);
+}
+.contenedor__titulo-h1 {
+    margin-left: 2rem;
+    font-weight: bold;
+    padding-right: 2rem;
+}
+
+/* Descripción del producto */
+.contenedor__descripcion {
+    font-family: Montserrat, cursive;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    margin-bottom: 0;
+    line-height: 2.5rem;
+    color: var(--Dark-grayish-blue);
+}
+
+/* Precio */
+.contenedor__precio {
+    display: flex;
+    justify-content: left;
+    gap: 2.5rem;
+
+    margin-left: 2rem;
+    margin-top: 0;
+}
+.contenedor__precio-rebaja {
+    font-family: Fraunces, cursive;
+    color: var(--Dark-cyan);
+    font-size: 3rem;
+}
+.contenedor__precio-normal {
+    color: var(--Dark-grayish-blue);
+    height: 2rem;
+    line-height: 7rem;
+    text-decoration: line-through;
+}
+
+/* Botón */
+.contenedor__boton img {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 2rem;
+}
+.contenedor__boton {
+    cursor: pointer;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+
+    margin-left: 2rem;
+    width: 33rem;
+    border-radius: 1rem;
+    border-color: var(--Dark-cyan);
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.contenedor__boton-text {
+    font-family: Montserrat, cursive;
+    font-weight: bold;
+    line-height: 3rem;
+}
+.contenedor__boton:hover {
+    background-color: var(--Hover-cyan);
+}
+
+/* Footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* Diseño para Desktop */
+@media only screen and (min-width:1024px ) {
+    .contenedor {
+        background-color: var(--White);
+        text-align: left;
+
+        width: 100rem;
+        height: 68rem;
+        margin: 10rem 0 0 45rem;
+
+            display: flex;
+
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+    .contenedor__imagen {
+        width: 45.3rem;
+        border-bottom-left-radius: 1.5rem;
+        border-top-right-radius: 0;
+    }
+
+    .contenedor__informacion {
+        width: 50rem;
+        padding: 2rem;
+    }
+    .contenedor__titulo-h1 {
+            font-size: 4rem;
+    }
+    .contenedor__descripcion {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .contenedor__precio {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+    .contenedor__precio-rebaja {
+        font-size: 3.5rem;
+    }
+
+    .contenedor__boton {
+        width: 45rem;
+        margin-top: 5rem;
+    }
+    
+    .attribution {
+        margin-top: 5rem;
+        font-size: 1.5rem;
+    }
+}

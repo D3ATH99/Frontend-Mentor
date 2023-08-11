@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+</head>
+<body>
+  <div class="contenedor">
+
+    <div class="contenedor__producto">
+
+    <img class="contenedor__imagen" src="img/image-product-mobile.jpg"
+      srcset="img/image-product-desktop.jpg 1600w,
+      img/image-product-mobile.jpg 320w"
+      sizes="(max-width: 480px) 320px, 1024px"
+      alt="Gabrielle Essence Eau De Parfum">
+
+    </div>
+
+    <div class="contenedor__informacion">
+
+  <h3 class="contenedor__titulo-h3">Perfume</h3>
+  <h1 class="contenedor__titulo-h1">Gabrielle Essence <br> Eau De Parfum</h1>
+  <p class="contenedor__descripcion"> A floral, solar and voluptuous interpretation <br> composed by Olivier Polge, <br> 
+  Perfumer-Creator for the House of CHANEL.</p>
+
+  <div class="contenedor__precio">
+
+    <p class="contenedor__precio-rebaja">$149.99</p>
+    <p class="contenedor__precio-normal">$169.99</p>
+
+  </div>
+
+  <button class="contenedor__boton">
+    <img src="img/icon-cart.svg">
+    <p class="contenedor__boton-text">Add to cart</p>
+  </button>
+
+    </div> <!--.contenedor__información-->
+    
+  </div> <!--.contenedor-->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a target="_blank" href="https://naremefreelancer.netlify.app/">Antonio Nareme</a>.
+  </div>
+  
+</body>
+</html>
