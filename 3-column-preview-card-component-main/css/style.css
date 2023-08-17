@@ -1,0 +1,208 @@
+:root {
+    /* Primarios */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* Neutral */
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+    --very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+body {
+    font-size: 16px;/* 1rem = 10px */
+    background-color: var(--very-light-gray);
+}
+
+/* Container */
+.container {
+    display: block;
+    width: 37.5rem;
+    padding: 5rem 2rem;
+    margin: 0 auto;
+}
+
+/* Secciones */
+/* Sedan */
+.sedan {
+    background-color: var(--bright-orange);
+    height: 30rem;
+    padding: 3rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.sedan__titulo {
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    font-family: "Lexend Deca", sans-serif;
+}
+.sedan__parrafo {
+    color: var(--transparent-white);
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+.sedan__boton {
+    background-color: var(--very-light-gray);
+    color: var(--bright-orange);
+    border-radius: 2rem;
+    padding: 1rem;
+    font-family: "Lexend Deca", sans-serif;
+    text-decoration: none;
+}
+.sedan__boton:hover {
+    background-color: transparent;
+    color: var(--very-light-gray);
+    border: .2rem solid var(--very-light-gray);
+}
+
+/* Suvs */
+.suv {
+    background-color: var(--dark-cyan);
+    height: 30rem;
+    padding: 3rem;
+}
+
+.suv__titulo {
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.suv__parrafo {
+    color: var(--transparent-white);
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.suv__boton {
+    background-color: var(--very-light-gray);
+    color: var(--dark-cyan);
+    border-radius: 2rem;
+    padding: 1rem;
+    font-family: "Lexend Deca", sans-serif;
+    text-decoration: none;
+}
+
+.suv__boton:hover {
+    background-color: transparent;
+    color: var(--very-light-gray);
+    border: .2rem solid var(--very-light-gray);
+}
+
+/* Luxury */
+.luxury {
+    background-color: var(--very-dark-cyan);
+    height: 30rem;
+    padding: 3rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.luxury__titulo {
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.luxury__parrafo {
+    color: var(--transparent-white);
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.luxury__boton {
+    background-color: var(--very-light-gray);
+    color: var(--very-dark-cyan);
+    border-radius: 2rem;
+    padding: 1rem;
+    font-family: "Lexend Deca", sans-serif;
+    text-decoration: none;
+}
+
+.luxury__boton:hover {
+    background-color: transparent;
+    color: var(--very-light-gray);
+    border: .2rem solid var(--very-light-gray);
+}
+
+/* Footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+/* Versión desktop */
+@media (min-width: 992px) {
+    .container {
+        margin: 5rem 0 0 14rem;
+        width: 120rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Sedan */
+    .sedan {
+        height: 50rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+    .sedan__titulo {
+        font-size: 3rem;
+    }
+    .sedan__parrafo {
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+        font-size: 2rem;
+        width: 25rem;
+    }
+
+    /* Suv */
+    .suv {
+        height: 50rem;
+    }
+    .suv__titulo {
+        font-size: 3rem;
+    }
+    
+    .suv__parrafo {
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+        font-size: 2rem;
+        width: 25rem;
+    }
+
+    /* Luxury */
+    .luxury {
+        height: 50rem;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1rem;
+    }
+    .luxury__titulo {
+        font-size: 3rem;
+    }
+
+    .luxury__parrafo {
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+        font-size: 2rem;
+        width: 25rem;
+    }
+}
