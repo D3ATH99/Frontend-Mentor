@@ -1,0 +1,121 @@
+:root {
+    /*Primarios*/
+    --very-dark-blue: hsl(233, 47%, 7%); /* Main background */
+    --dark-desaturated-blue: hsl(244, 38%, 16%); /* Card background */
+    --soft-violet: hsl(277, 64%, 61%); /* Accent */
+    /* Neutrales */
+    --white: hsl(0, 0%, 100%); /* Main heading, stats */
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /* Main paragraph */
+    --slightly-transparent-white2: hsla(0, 0%, 100%, 0.6); /* Stat headings */
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+body {
+    font-size: 16px;/* 1rem = 10px */
+    background-color: var(--very-dark-blue);
+}
+
+/* Mobile first */
+.contenedor {
+    width: 37.5rem;
+    margin: 0 auto;
+    background-color: var(--dark-desaturated-blue);
+}
+.contenedor__fondo img{
+    width: 37.5rem;
+    margin: 0;
+    padding: 0;
+}
+.contenedor__content {
+    padding-bottom: 2rem;
+}
+
+/* Título */
+.contenedor__titulo {
+    color: var(--white);
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+.contenedor__titulo span {
+    color: var(--soft-violet);
+}
+
+/* Párrafo */
+.contenedor__parrafo {
+    color: var(--slightly-transparent-white);
+    text-align: center;
+    font-size: 1.9rem;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+/* Stats */
+.contenedor__stats {
+    text-align: center;
+}
+.contenedor__stats h3 {
+    color: var(--white);
+    font-size: 2rem;
+    margin: 2rem 0 0 0;
+    font-family: "Inter", sans-serif;
+}
+.contenedor__stats p {
+    color: var(--slightly-transparent-white);
+    font-size: 1.8rem;
+    margin: 0;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+/* Footer */
+.attribution {
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    font-size: 11px;
+    text-align: center;
+    color: var(--white);
+  }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+  }
+
+  /* Versión desktop */
+  @media (min-width: 992px) {
+      .contenedor {
+        width: 110rem;
+        height: 50rem;
+        margin: 10rem auto;
+        text-align: center;
+
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 5rem;
+      }
+      .contenedor__fondo img {
+        height: 50rem;
+        width: 55rem;
+      }
+      .contenedor__parrafo {
+        margin-top: 8rem;
+      }
+      .contenedor__content {
+        padding: 4rem;
+      }
+      .contenedor__stats {
+        display: flex;
+        gap: 4rem;
+        margin: 8rem 0 0 3.5rem;
+      }
+      
+  }
