@@ -1,0 +1,186 @@
+:root {
+    --very_dark_magenta: hsl(300, 43%, 22%);
+    --soft_pink: hsl(333, 80%, 67%);
+
+    --dark_grayish_magenta: hsl(303, 10%, 53%);
+    --light_grayish_magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* !Globales */
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: "League Spartan",sans-serif;
+}
+
+/* !header */
+.header {
+    background: url(../img/bg-pattern-top-mobile.svg);
+}
+/* ?Header h1 */
+.header h1 {
+    margin: 0;
+    padding: 5rem 5rem 0 5rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--very_dark_magenta);
+}
+/* ?Header parrafo */
+.header p {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0 4rem;
+    font-size: 1.7rem;
+    color: var(--dark_grayish_magenta);
+}
+
+/* !Valoraciones */
+.stars {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.reviews, .guru, .tech {
+    background-color: var(--light_grayish_magenta);
+    font-weight: bold;
+    margin: 1rem 2rem;
+    padding: 1rem 1rem 0;
+    border-radius: 1.5rem;
+}
+.reviews__parrafo, .guru__parrafo, .tech__parrafo {
+    color: var(--very_dark_magenta);
+    font-weight: bold;
+}
+
+/* !Clientes */
+.usuarios {
+    background: url(../img/bg-pattern-bottom-mobile.svg);
+
+    display: flex;
+    flex-direction: column;
+}
+/* ?Contenido de los usuarios */
+.user1,
+.user2,
+.user3 {
+    background-color: var(--very_dark_magenta);
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    color: var(--white);
+}
+.user1 span,
+.user2 span,
+.user3 span {
+    color: var(--soft_pink);
+}
+
+/* ?Flex al nombre y la imágen */
+.user1__datos, .user2__datos, .user3__datos {
+    display: flex;
+    gap: 2rem;
+}
+/* ?Imágen */
+.usuarios img {
+    border-radius: 100%;
+    height: 5rem;
+}
+.user1__datos__img, .user2__datos__img, .user3__datos__img {
+    padding-left: 2rem;
+}
+
+/* !Footer */
+.attribution {
+    padding: 2rem;
+}
+
+
+/* !Desktop version */
+@media (min-width: 992px) {
+    /* !grid */
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    /* !Header */
+    .header {
+        background: url(../img/bg-pattern-top-desktop.svg);
+    }
+    .stars {
+        background: url(../img/bg-pattern-top-desktop.svg);
+        padding: 4rem 4rem 4rem 25rem;
+    }
+    
+    /* ?Header titulo */
+    .header h1 {
+        width: 35rem;
+        text-align: left;
+        font-size: 4rem;
+    }
+    
+    /* ?Header parrafo */
+    .header p {
+        width: 45rem;
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    /* !Valoraciones */
+    .reviews, .guru, .tech {
+        width: 40rem;
+        display: flex;
+        gap: 4rem;
+    }
+    .reviews__star, .guru__star, .tech__star {
+        padding-top: 1.5rem;
+    }
+
+    /* ?Posicionar cajas */
+    .guru {
+        position: relative;
+        left: 5rem;
+    }
+    .tech {
+        position: relative;
+        left: 11rem;
+    }
+
+    /* !Usuarios */
+    .usuarios {
+        display: flex;
+        flex-direction: row;
+    }
+    .user1, .user2, .user3 {
+        height: 25rem;
+        font-size: 2rem;
+        border-radius: 1rem;
+    }
+
+    /* ?Posicionar cajas */
+    .user2 {
+        position: relative;
+        top: 3rem;
+    }
+    .user3 {
+        position: relative;
+        top: 7rem;
+    }
+
+    /* !Footer */
+    .attribution {
+        margin-top: 10rem;
+        background: url(../img/bg-pattern-bottom-desktop.svg);
+    }
+}
